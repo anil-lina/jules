@@ -14,8 +14,8 @@ def oracle_resource(_):
         service_name=config.ORACLE_SERVICE_NAME,
     )
     oracledb.defaults.fetch_lobs = False
-    instant_client_dir = 'C:\\Temp\\instantclient_23_5\\'
-    oracledb.init_oracle_client(lib_dir=instant_client_dir)
+    if config.ORACLE_INSTANT_CLIENT_PATH:
+        oracledb.init_oracle_client(lib_dir=config.ORACLE_INSTANT_CLIENT_PATH)
     connection = oracledb.connect(
         user=config.ORACLE_USER,
         password=config.ORACLE_PASSWORD,

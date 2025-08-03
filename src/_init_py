@@ -1,6 +1,12 @@
 from dagster import Definitions
 from src.assets.sync import load_oracle_assets
+from src.resources.oracle import oracle_resource
+from src.resources.oci import oci_resource
 
 defs = Definitions(
-    assets=load_oracle_assets()
+    assets=load_oracle_assets(),
+    resources={
+        "oracle": oracle_resource,
+        "oci": oci_resource,
+    },
 )

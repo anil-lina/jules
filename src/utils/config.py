@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Oracle Database Credentials
+ORACLE_INSTANT_CLIENT_PATH = os.getenv("ORACLE_INSTANT_CLIENT_PATH")
 ORACLE_USER = os.getenv("ORACLE_USER")
 ORACLE_PASSWORD = os.getenv("ORACLE_PASSWORD")
 ORACLE_HOST = os.getenv("ORACLE_HOST")
