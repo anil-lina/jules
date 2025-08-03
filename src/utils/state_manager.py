@@ -15,7 +15,7 @@ def get_last_timestamp(table_name: str) -> str:
     except FileNotFoundError:
         return "1970-01-01 00:00:00"
 
-def update_last_timestamp(table_name: str, timestamp: datetime):
+def update_last_timestamp(table_name: str, timestamp: str):
     """
     Updates the state file with the new timestamp for the given table.
     """
@@ -25,7 +25,7 @@ def update_last_timestamp(table_name: str, timestamp: datetime):
     except FileNotFoundError:
         state = {}
 
-    state[table_name] = timestamp.strftime("%Y-%m-%d %H:%M:%S")
+    state[table_name] = timestamp
 
     with open(STATE_FILE, "w") as f:
         json.dump(state, f, indent=4)

@@ -25,7 +25,6 @@ OCI_NAMESPACE = os.getenv("OCI_NAMESPACE")
 
 # Asset Configuration
 TABLES_CONFIG_PATH = "tables.yaml"
-OCI_ASSET_BUCKET = os.getenv("OCI_BUCKET_NAME")
 
 def get_table_configs():
     """Loads table configurations from tables.yaml."""
