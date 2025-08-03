@@ -1,0 +1,7 @@
+dagster
+dagster-webserver
+oci
+oracledb
+python-dotenv
+pandas
+PyYAML

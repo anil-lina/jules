@@ -1,0 +1,9 @@
+- name: SUPPORT_GROUP_FUNCTIONAL_ROLES
+  incremental: true
+  cursor_column: PROCESSED_DTTM
+- name: SUPPORT_GROUPS
+  incremental: true
+  cursor_column: PROCESSED_DTTM
+- name: SUPPORT_GROUP_MEMBERS
+  incremental: true
+  cursor_column: PROCESSED_DTTM

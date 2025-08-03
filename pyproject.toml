@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dagster_oracle_to_oci"
+version = "0.0.1"
+description = "A Dagster project to transfer data from Oracle to OCI."
+authors = [
+    { name = "Jules", email = "jules@example.com" },
+]
+requires-python = ">=3.8"
+dependencies = [
+    "dagster",
+    "dagster-webserver",
+    "oracledb",
+    "oci",
+    "PyYAML",
+    "python-dateutil",
+]
+
+[tool.setuptools]
+packages = ["dagster_oracle_to_oci"]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+]
