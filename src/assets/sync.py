@@ -23,7 +23,7 @@ def build_oracle_asset(table_name: str, is_incremental: bool, cursor_column: str
         """
         oracle = context.resources.oracle
         oci = context.resources.oci
-        upload_manager = UploadManager(oci.object_storage_client)
+        upload_manager = UploadManager(oci)
 
         oci_bucket = config.OCI_BUCKET_NAME
         namespace = config.OCI_NAMESPACE
