@@ -99,4 +99,4 @@ def build_oracle_asset(table_name: str, is_incremental: bool, cursor_column: str
 
 def load_oracle_assets():
     table_configs = get_table_configs()
-    return [build_oracle_asset(config["name"], config.get("incremental", False), config.get("cursor_column")) for config in table_configs.get("tables", [])]
+    return [build_oracle_asset(config["name"], config.get("incremental", False), config.get("cursor_column")) for config in table_configs]
